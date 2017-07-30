@@ -5,7 +5,7 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>#!/usr/bin/env ruby18 -wKU
+	<string>#!/usr/bin/env ruby -w
 class Order
 
   def initialize
@@ -45,7 +45,7 @@ data2 = data.gsub(/^(#+)([^#\n]+)/) do |x|
   next x if hx.size &gt; order.maxl
 
   ordstr = order.getl(hx.size)
-  title.sub! /^(\d+\.)+\s+/, ''
+  title.sub! /^[\d.]+\s+/, ''
   "#{hx} #{ordstr}#{title}"
 end
 
